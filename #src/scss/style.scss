@@ -47,6 +47,7 @@ button:focus {
 //==IMPORT FORMS & UI SLYLE=============================================
 @import 'swiper';
 @import 'forms';
+@import 'decoration-element';
 //==IMPORT PAGES STYLE & PAGE ELEMENTS STYLE
 @import 'header';
 @import 'footer';
@@ -284,8 +285,6 @@ button:focus {
    @media (max-width: $md5 + px) {
       padding: 100px 0 0;
    }
-   &__decoration {
-   }
    // .fullscreen__row
    &__row {
       position: relative;
@@ -384,99 +383,10 @@ button:focus {
       }
    }
 }
-//fullscreen decoration
-.decoration-fullscreen {
-   position: absolute;
-   top: 0;
-   left: 50%;
-   z-index: 1;
-   width: 100%;
-   height: 100%;
-   max-width: $maxWidth + px;
-   min-width: 1700px;
-   transform: translate(-50%, 0);
-   @media (max-width: $md2 + px) {
-      display: none;
-   }
-   // .decoration-fullscreen__fig
-   &__fig {
-      position: absolute;
 
-      // .decoration-fullscreen__fig_01
-      &_01 {
-         top: 180px;
-         left: 67px;
-      }
-      // .decoration-fullscreen__fig_02
-      &_02 {
-         top: 370px;
-         left: 200px;
-      }
-      // .decoration-fullscreen__fig_03
-      &_03 {
-         bottom: 327px;
-         left: 120px;
-      }
-      // .decoration-fullscreen__fig_04
-      &_04 {
-         bottom: 200px;
-         left: 180px;
-         z-index: 2;
-      }
-      // .decoration-fullscreen__fig_05
-      &_05 {
-         bottom: 126px;
-         left: 70px;
-      }
-      // .decoration-fullscreen__fig_06
-      &_06 {
-         top: 220px;
-         left: 52%;
-      }
-      // .decoration-fullscreen__fig_07
-      &_07 {
-         top: 510px;
-         left: 49%;
-      }
-      // .decoration-fullscreen__fig_08
-      &_08 {
-         bottom: 90px;
-         left: 40%;
-      }
-      // .decoration-fullscreen__fig_09
-      &_09 {
-         top: 187px;
-         right: 300px;
-      }
-      // .decoration-fullscreen__fig_10
-      &_10 {
-         top: 111px;
-         right: 60px;
-      }
-      // .decoration-fullscreen__fig_11
-      &_11 {
-         top: 117px;
-         right: 47px;
-      }
-      // .decoration-fullscreen__fig_12
-      &_12 {
-         top: 321px;
-         right: 17px;
-      }
-      // .decoration-fullscreen__fig_13
-      &_13 {
-         bottom: 180px;
-         right: 28px;
-      }
-      // .decoration-fullscreen__fig_14
-      &_14 {
-         bottom: 100px;
-         right: 108px;
-      }
-   }
-}
 //about section====================================================
 .about-section {
+   position: relative;
    padding: 100px 0px;
    @media (max-width: $md3 + px) {
       padding: 70px 0px;
@@ -587,6 +497,8 @@ button:focus {
 }
 
 .about-block {
+   position: relative;
+   z-index: 2;
    &__box {
       padding: 0 15px;
       margin: 0 auto;
@@ -656,8 +568,9 @@ button:focus {
    }
    // .about-block__picture
    &__picture {
-      flex: 0 0 55%;
+      flex: 0 0 50%;
       @media (min-width: $md2 + px) {
+         width: 50%;
          align-self: stretch;
          transform: translate(-100%, 0);
       }
@@ -718,6 +631,7 @@ button:focus {
 
 //services-section================================================
 .services-section {
+   position: relative;
    padding: 100px 0 200px;
    @media (max-width: $md5 + px) {
       padding: 50px;
@@ -855,6 +769,7 @@ button:focus {
 
 //projects-section===============================================
 .projects-section {
+   position: relative;
    padding: 100px 0px 192px;
    background-position: center;
    background-size: cover;
@@ -1165,6 +1080,7 @@ button:focus {
 
 //.our-team-section============================================
 .our-team-section {
+   position: relative;
    @include adaptiv-value(padding-top, 70, 230);
    background-position: center center;
    background-size: cover;
@@ -1172,6 +1088,8 @@ button:focus {
    background-image: url('../img/bg-grad-4.jpg');
    // .our-team-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .our-team-section__title
    &__title {
@@ -1268,6 +1186,7 @@ button:focus {
 }
 //reviews-section===============================================
 .reviews-section {
+   position: relative;
    padding: 50px 0px 190px;
    background-position: 0 0;
    background-size: 100% 100%;
@@ -1281,6 +1200,8 @@ button:focus {
    }
    // .reviews-section__row
    &__row {
+      position: relative;
+      z-index: 2;
       display: flex;
       align-items: flex-end;
       @media (max-width: $md2 + px) {
@@ -1446,6 +1367,7 @@ button:focus {
 
 //contacts-section================================================
 .contact-section {
+   position: relative;
    padding: 190px 0px;
    background-position: 0 0;
    background-size: 100% 100%;
@@ -1617,7 +1539,8 @@ button:focus {
 
 //blog-section===================================================
 .blog-section {
-   padding: 120px 0;
+   position: relative;
+   padding: 190px 0;
    background-color: #f3f3f4;
    background-position: center center;
    background-size: cover;
