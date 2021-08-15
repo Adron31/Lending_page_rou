@@ -48,7 +48,7 @@ let path = {
    },
    //путь для очистки папки с результатами при запуске ГАЛПа
    clean: "./" + projectFolder + "/",
-}
+};
 
 //дополнительные переменные
 let { src, dest, watch, parallel, series } = require("gulp"),
@@ -79,7 +79,7 @@ let { src, dest, watch, parallel, series } = require("gulp"),
    fonter = require("gulp-fonter");                       //шрифты конвертация otf в ttf
 //npm i --save-dev webp-converter@2.2.3
 
-function browserSync() {
+function browserSync () {
    browsersync.init({
       //настройки плагина
       server: {
@@ -92,23 +92,23 @@ function browserSync() {
 }
 
 //работа с html 
-function html() {
+function html () {
    return src(path.src.html)       // метод получения исходных файлов по заданному пути
       .pipe(plumber())
       .pipe(fileInclude())         // собирает файлы html в один
-      .pipe(webpHtml())            // заменяет в html тег img на picture и подключает формат webp
+      //.pipe(webpHtml())            // заменяет в html тег img на picture и подключает формат webp
       .pipe(dest(path.build.html)) // запись полученых файлов в указанном каталоге, pipe - формирует цепочку потока данных (трубопровод)
-      .pipe(browsersync.stream())
+      .pipe(browsersync.stream());
 }
 
 // копирование min.css
-function mincss() {
+function mincss () {
    return src(path.src.mincss)
       .pipe(dest(path.build.css))
-      .pipe(browsersync.stream())
+      .pipe(browsersync.stream());
 }
 //работа scss
-function css() {
+function css () {
    return src(path.src.css)                               // метод получения исходных файлов по заданному пути
       .pipe(sourcemaps.init())
       .pipe(scss({                                           // обработка scss в соответствии с настройками
@@ -119,11 +119,11 @@ function css() {
          overrideBrowserslist: ["last 5 versions"],
          cascade: true,
       }))
-      .pipe(webpCss({
+      /*.pipe(webpCss({
          webpClass: '',
          noWebpClass: '.no-webp',
          replace_from: /\.(jpg|jpeg)/g,
-      }))
+      }))*/
       .pipe(dest(path.build.css))                        // выгружает обычный файл css
       .pipe(browsersync.stream())
       .pipe(cleanCss())                                 // сжимает и чистит файл css
@@ -132,11 +132,11 @@ function css() {
       }))
       .pipe(sourcemaps.write('.'))
       .pipe(dest(path.build.css))                        // запись полученых файлов в указанном каталоге, pipe - формирует цепочку потока данных (трубопровод)
-      .pipe(browsersync.stream())
+      .pipe(browsersync.stream());
 }
 
 //работа с js
-function js() {
+function js () {
    src(path.src.minjs)
       .pipe(fileInclude())
       .pipe(dest(path.build.js));
@@ -150,19 +150,19 @@ function js() {
       }))
       .pipe(sourcemaps.write('.'))
       .pipe(dest(path.build.js)) // запись полученых файлов в указанном каталоге, pipe - формирует цепочку потока данных (трубопровод)
-      .pipe(browsersync.stream())
+      .pipe(browsersync.stream());
 }
 
 //работа с картинками
-function images() {
+function images () {
    src(path.src.img.icons)
       .pipe(newer(path.build.img))
       .pipe(dest(path.build.img + 'icons/'));
    return src(path.src.img.img)       // метод получения исходных файлов по заданному пути
       .pipe(newer(path.build.img))
-      .pipe(webp({
+      /*.pipe(webp({
          quality: 70          // качество/сжатие
-      }))
+      }))*/
       .pipe(dest(path.build.img)) //выгрузка изображений webp
       .pipe(src(path.src.img.img))    // обращение к исходникам для последующей обработки изображений других форматов
       .pipe(newer(path.build.img))
@@ -173,11 +173,11 @@ function images() {
          optimizationLevel: 3 // от 0 до 7 уровень сжатия
       }))
       .pipe(dest(path.build.img)) // запись полученых файлов в указанном каталоге, pipe - формирует цепочку потока данных (трубопровод)
-      .pipe(browsersync.stream())
+      .pipe(browsersync.stream());
 }
 
 //svg-спрайт
-function spriteSvg() {
+function spriteSvg () {
    return src([sourceFolder + "/img/icons/sprite/*.svg"])
       .pipe(
          svgSprite({                            //настройки для создания спрайтов
@@ -189,7 +189,7 @@ function spriteSvg() {
             }
          })
       )
-      .pipe(dest(path.src.sprite))
+      .pipe(dest(path.src.sprite));
 }
 
 //png - спрайт
@@ -206,7 +206,7 @@ function spriteSvg() {
 }*/
 
 //обработка шрифтов
-function fonts() {                               // преобразование ttf в woff and woff2
+function fonts () {                               // преобразование ttf в woff and woff2
    // преобразование otf в ttf
    src([sourceFolder + "/fonts/*.otf"])
       .pipe(
@@ -224,7 +224,7 @@ function fonts() {                               // преобразование
 }
 
 //функция для подключения шрифтов в файле стилей fonts.scss
-function fontsStyle() {
+function fontsStyle () {
    let fileContent = fs.readFileSync(sourceFolder + "/scss/fonts.scss");
    if (fileContent == '') {
       fs.writeFile(sourceFolder + "/scss/fonts.scss", '', cb);
@@ -244,10 +244,10 @@ function fontsStyle() {
       });
    }
 }
-function cb() { return } //callback function
+function cb () { return; } //callback function
 
 // отслеживание изменения файлов
-function watchFiles() {
+function watchFiles () {
    watch([path.watch.html], html);   // отслеживает изменения во всех файлах html
    watch([path.watch.mincss], mincss);
    watch([path.watch.css], css);     // отслеживает изменения во всех файлах scss
@@ -257,7 +257,7 @@ function watchFiles() {
 }
 
 // удаление папки dist при перезаписи
-function clean() {
+function clean () {
    return del(path.clean);
 }
 

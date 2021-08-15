@@ -489,6 +489,10 @@ button:focus {
   right: 60px;
 }
 
+.decoration-about {
+  min-width: 1900px;
+}
+
 .decoration-about__fig-rect_01 {
   fill: #e0e634;
   top: 60px;
@@ -497,7 +501,7 @@ button:focus {
 
 .decoration-about__fig-rect_02 {
   fill: #fe6686;
-  bottom: 120px;
+  bottom: 100px;
   right: 32%;
 }
 
@@ -606,6 +610,10 @@ button:focus {
   bottom: 6.7%;
   right: 136px;
   z-index: 2;
+}
+
+.decoration-our-team {
+  min-width: 1900px;
 }
 
 .decoration-our-team__fig_01 {
@@ -1134,13 +1142,11 @@ button:focus {
   color: #5e5858;
 }
 
-.no-webp .page__inner {
-  background-image: url("../img/bg-grad-2.jpg"); }
-
 .page__inner {
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-grad-2.jpg");
 }
 
 .page__our-team {
@@ -1473,15 +1479,13 @@ button:focus {
   background: url("../img/icons/arrow-right.png") center/contain no-repeat;
 }
 
-.no-webp .projects-section {
-  background-image: url("../img/bg-grad-3.jpg"); }
-
 .projects-section {
   position: relative;
   padding: 100px 0px 192px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-grad-3.jpg");
 }
 
 .projects-section__title {
@@ -1640,14 +1644,12 @@ button:focus {
   color: #5e5858;
 }
 
-.no-webp .our-team-section {
-  background-image: url("../img/bg-grad-4.jpg"); }
-
 .our-team-section {
   position: relative;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-grad-4.jpg");
 }
 
 .our-team-section__container {
@@ -1724,15 +1726,13 @@ button:focus {
   color: #adb0ba;
 }
 
-.no-webp .reviews-section {
-  background-image: url("../img/bg-5.jpg"); }
-
 .reviews-section {
   position: relative;
   padding: 50px 0px 190px;
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-5.jpg");
 }
 
 .reviews-section__row {
@@ -1835,15 +1835,13 @@ button:focus {
   color: #111111;
 }
 
-.no-webp .contact-section {
-  background-image: url("../img/bg-grad-5.jpg"); }
-
 .contact-section {
   position: relative;
   padding: 190px 0px;
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-grad-5.jpg");
 }
 
 .contact-section__title {
@@ -1933,9 +1931,6 @@ button:focus {
   color: #111111;
 }
 
-.no-webp .blog-section {
-  background-image: url("../img/bg-grad-6.jpg"); }
-
 .blog-section {
   position: relative;
   padding: 190px 0;
@@ -1943,6 +1938,7 @@ button:focus {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-grad-6.jpg");
 }
 
 .blog-section__header {
@@ -3593,15 +3589,3 @@ button:focus {
     top: calc(480px + 120 * ((100vw - 967.98px) / 202.02));
   }
 }
-
-.page__inner { background-image: url(../img/bg-grad-2.webp); }
-
-.projects-section { background-image: url(../img/bg-grad-3.webp); }
-
-.our-team-section { background-image: url(../img/bg-grad-4.webp); }
-
-.reviews-section { background-image: url(../img/bg-5.webp); }
-
-.contact-section { background-image: url(../img/bg-grad-5.webp); }
-
-.blog-section { background-image: url(../img/bg-grad-6.webp); }

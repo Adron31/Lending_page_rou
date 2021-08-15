@@ -126,6 +126,7 @@
 }
 //about decoration
 .decoration-about {
+	min-width: 1900px;
 	// .decoration-about__fig-rect
 	&__fig-rect {
 		// .decoration-about__fig-rect_01
@@ -137,7 +138,7 @@
 		// .decoration-about__fig-rect_02
 		&_02 {
 			fill: #fe6686;
-			bottom: 120px;
+			bottom: 100px;
 			right: 32%;
 		}
 	}
@@ -265,6 +266,7 @@
 }
 //decoration our-team
 .decoration-our-team {
+	min-width: 1900px;
 	// .decoration-our-team__fig
 	&__fig {
 		// .decoration-our-team__fig_01
