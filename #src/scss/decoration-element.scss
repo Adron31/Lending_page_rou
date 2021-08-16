@@ -162,6 +162,7 @@
 			stroke: #35a8df;
 			top: 386px;
 			left: 148px;
+			transform: rotate(110deg);
 		}
 		// .decoration-about__fig_03
 		&_03 {
@@ -181,6 +182,7 @@
 			top: 125px;
 			left: 90px;
 			z-index: 2;
+			transform: rotate(0);
 		}
 		// .decoration-services__fig_02
 		&_02 {
@@ -252,6 +254,7 @@
 			stroke: #e4007d;
 			top: 38%;
 			right: 165px;
+			transform: rotate(-115deg);
 		}
 		// .decoration-projects__fig_03
 		&_03 {
@@ -318,7 +321,7 @@
 			stroke: #25ffff;
 			top: 11%;
 			left: 175px;
-			transform: rotateY(0deg);
+			transform: rotate(-115deg) rotateY(0deg);
 		}
 		// .decoration-reviews__fig_02
 		&_02 {
@@ -343,7 +346,7 @@
 			top: 25%;
 			left: 125px;
 			stroke: #fe9a3f;
-			transform: rotateY(0deg);
+			transform: rotate(-115deg) rotateY(0deg);
 		}
 		// .decoration-contacts__fig_02
 		&_02 {
@@ -394,6 +397,7 @@
 			right: 58px;
 			bottom: 13%;
 			stroke: #35a8df;
+			transform: rotate(110deg);
 		}
 		// .decoration-blog__fig_05
 		&_05 {

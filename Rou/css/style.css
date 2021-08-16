@@ -534,6 +534,9 @@ button:focus {
   stroke: #35a8df;
   top: 386px;
   left: 148px;
+  -webkit-transform: rotate(110deg);
+      -ms-transform: rotate(110deg);
+          transform: rotate(110deg);
 }
 
 .decoration-about__fig_03 {
@@ -547,6 +550,9 @@ button:focus {
   top: 125px;
   left: 90px;
   z-index: 2;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .decoration-services__fig_02 {
@@ -611,6 +617,9 @@ button:focus {
   stroke: #e4007d;
   top: 38%;
   right: 165px;
+  -webkit-transform: rotate(-115deg);
+      -ms-transform: rotate(-115deg);
+          transform: rotate(-115deg);
 }
 
 .decoration-projects__fig_03 {
@@ -667,8 +676,8 @@ button:focus {
   stroke: #25ffff;
   top: 11%;
   left: 175px;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  -webkit-transform: rotate(-115deg) rotateY(0deg);
+          transform: rotate(-115deg) rotateY(0deg);
 }
 
 .decoration-reviews__fig_02 {
@@ -687,8 +696,8 @@ button:focus {
   top: 25%;
   left: 125px;
   stroke: #fe9a3f;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  -webkit-transform: rotate(-115deg) rotateY(0deg);
+          transform: rotate(-115deg) rotateY(0deg);
 }
 
 .decoration-contacts__fig_02 {
@@ -737,6 +746,9 @@ button:focus {
   right: 58px;
   bottom: 13%;
   stroke: #35a8df;
+  -webkit-transform: rotate(110deg);
+      -ms-transform: rotate(110deg);
+          transform: rotate(110deg);
 }
 
 .decoration-blog__fig_05 {
