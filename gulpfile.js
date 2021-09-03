@@ -1,4 +1,4 @@
-let projectFolder = require("path").basename(__dirname); //переменная пути к папке с результатом работы галп
+let projectFolder = "dist"; //переменная пути к папке с результатом работы галп
 let sourceFolder = "#src"; // переменная с именем папки исходника
 
 let fs = require("fs"); // file system

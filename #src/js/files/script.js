@@ -31,3 +31,29 @@ window.addEventListener('resize', function () {
    changeToMaxHeight();
 });
 changeToMaxHeight();
+
+//anchor navigation
+const menu_list = menu_body.querySelector('.menu__list');
+
+menu_list.addEventListener('click', function (evt) {
+   const elem = evt.target;
+
+   if (elem.classList.contains('js_anchor')) {
+      evt.preventDefault();
+      const id = elem.getAttribute('href');
+      const id_section = document.querySelector(id);
+      id_section.scrollIntoView({
+         block: 'start',
+         behavior: 'smooth'
+      });
+   }
+});
+
+//focus out
+window.addEventListener('mouseup', function (evt) {
+   const tag_name = evt.target.tagName;
+   const elem = evt.target;
+   if (tag_name === 'A' || tag_name === 'BUTTON') {
+      elem.blur();
+   }
+});

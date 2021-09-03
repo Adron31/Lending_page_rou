@@ -1,12 +1,12 @@
 {
-  "name": "adron31",
+  "name": "rou",
   "version": "1.0.0",
-  "description": "сборка gulp",
+  "description": "lending page layout",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "DndRm",
+  "author": "Andrei Danyliuk <dandrom31@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -34,9 +34,7 @@
     "gulp.spritesmith": "^6.11.0",
     "webp-converter": "^2.2.3"
   },
-  "dependencies": {
-    "jslint": "^0.12.1"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Adron31/lending-rou.git"

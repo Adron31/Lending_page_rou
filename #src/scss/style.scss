@@ -393,6 +393,8 @@ button:focus {
    }
    // .about-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .about-section__title
    &__title {
@@ -638,6 +640,8 @@ button:focus {
    }
    // .services-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .services-section__title
    &__title {
@@ -783,6 +787,8 @@ button:focus {
    }
    // .projects-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .projects-section__title
    &__title {
@@ -1197,6 +1203,8 @@ button:focus {
    }
    // .reviews-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .reviews-section__row
    &__row {
@@ -1387,6 +1395,8 @@ button:focus {
    }
    //.contact-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .contact-section__title
    &__title {
@@ -1554,6 +1564,8 @@ button:focus {
    }
    // .blog-section__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .blog-section__header
    &__header {

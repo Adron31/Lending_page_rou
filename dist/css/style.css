@@ -1248,6 +1248,11 @@ button:focus {
   padding: 100px 0px;
 }
 
+.about-section__container {
+  position: relative;
+  z-index: 2;
+}
+
 .about-section__title {
   margin: 0 auto;
   max-width: 750px;
@@ -1425,6 +1430,11 @@ button:focus {
   padding: 100px 0 200px;
 }
 
+.services-section__container {
+  position: relative;
+  z-index: 2;
+}
+
 .services-section__title {
   margin-left: auto;
   max-width: 750px;
@@ -1516,6 +1526,11 @@ button:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../img/bg-grad-3.jpg");
+}
+
+.projects-section__container {
+  position: relative;
+  z-index: 2;
 }
 
 .projects-section__title {
@@ -1765,6 +1780,11 @@ button:focus {
   background-image: url("../img/bg-5.jpg");
 }
 
+.reviews-section__container {
+  position: relative;
+  z-index: 2;
+}
+
 .reviews-section__row {
   position: relative;
   z-index: 2;
@@ -1874,6 +1894,11 @@ button:focus {
   background-image: url("../img/bg-grad-5.jpg");
 }
 
+.contact-section__container {
+  position: relative;
+  z-index: 2;
+}
+
 .contact-section__title {
   margin: 0 auto;
   margin-bottom: 120px;
@@ -1969,6 +1994,11 @@ button:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../img/bg-grad-6.jpg");
+}
+
+.blog-section__container {
+  position: relative;
+  z-index: 2;
 }
 
 .blog-section__header {
